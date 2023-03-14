@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta author="Michal H. Kolář">
+
+	<title>
+        Atomistic computer simulations of the ribosome
+    </title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.mhk.css" id="theme">
+
+</head>
+	<body>
+        <div class="reveal">
+	        <div class="slides">
+<!--
+============ SLIDES START HERE ============
+-->
+
+
+
+<section style="text-align: left">
+    <h1 style="margin-top:1em">
+        Atomistic computer simulations of the ribosome
+    </h1>
+    <div class="leftcol" style="width:50%">
+        <h3 style="margin-top: 2em; margin-bottom: 2em">Michal H. Kolář</h3>
+        <h4><a href="http://mhko.science/contact" target="_blank">http://mhko.science/contact</a></h4>
+        <h4><a href="http://mhko.science/jh-inst-2023" target="_blank">http://mhko.science/jh-inst-2023</a></h4>
+    </div>
+    <div class="rightcol" style="width:48%">
+        <video width="100%" nocontrols autoplay loop style="margin-top:-3em">
+          <source data-src="./media/ribosome.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+
+<section>
+    <div style="width: 100%">
+        <img src="./media/team.jpg">
+        <div style="padding: 1em; display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center">
+            <img src="./media/logos/vscht.png" style="height: 60px;">
+            <img src="./media/logos/gacr.png" style="height: 70px;">
+            <img src="./media/logos/czexpats.png" style="height: 90px;">
+            <img src="./media/logos/it4i.png" style="height: 55px;">
+            <img src="./media/logos/mpcdf.png" style="height: 55px;">
+        </div>
+    </div>
+    <!--div class="rightcol" style="width: 27%; font-size: smaller">
+        <span>19-06479Y, 23-05557S, 23-05764S</span><br>
+        <p>
+            Josef Cikhart<br>
+            <b>Michaela Černeková</b><br>
+            Aneta Hrádková<br>
+            Petr Chalupský<br>
+            Jan Kejla<br>
+            Aneta Leskourová<br>
+            Petr Linhart<br>
+            Martin Mašek<br>
+            <b>Hugo McGrath</b><br>
+            Jan Michna<br>
+            Felipe C. Nepomuceno<br>
+            Arian Adam Ott<br>
+        </p>
+        <p>
+            Tereza Svatoňová<br>
+            <b>Iva Švecová</b><br>
+        </p>
+    </div-->
+</section>
+
+
+<section style="text-align: left">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom:2em">
+        <img src="./media/logos/mpinat.png" style="height:70px">
+        <h4>Helmut Grubmüller group</h4>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom:2em">
+        <img src="./media/logos/ostrava-uni.png" style="height:60px"><br>
+        <h4>Marek Eliáš group</h4>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <img src="./media/logos/biocev.png" style="height:70px">
+        <img src="./media/logos/prfuk.png" style="height:70px">
+        <h4>Klára Hlouchová group</h4>
+    </div>
+</section>
+
+
+<section>
+    <div style="width:70%; margin: 5em auto; text-align: left">
+        <h3>1. Ribosome essentials</h3>
+        <h3>2. Atomistic simulations</h3>
+        <h3>3. Case study: PDF</h3>
+    </div>
+</section>
+
+
+<section>
+    <div style="width:70%; margin: 5em auto; text-align: left">
+        <h3>1. Ribosome essentials</h3>
+        <h3 style="color:silver">2. Atomistic simulations</h3>
+        <h3 style="color:silver">3. Case study: PDF</h3>
+    </div>
+</section>
+
+
+<section>
+    <img src="./media/reaction/reaction.png" style="margin-top:1em; width: 70%">
+</section>
+
+
+<section>
+    <div class="r-stack">
+        <img src="./media/translation-scheme/scheme-0.png" style="width:70%">
+        <img src="./media/translation-scheme/scheme-1.png" style="width:70%" class="fragment">
+    </div>
+</section>
+
+
+<section>
+    <!-- VMD session -->
+</section>
+
+
+<section>
+    <div style="width:70%; margin: 5em auto; text-align: left">
+        <h3 style="color:silver">1. Ribosome essentials</h3>
+        <h3>2. Atomistic simulations</h3>
+        <h3 style="color:silver">3. Case study: PDF</h3>
+    </div>
+</section>
+
+
+<section>
+    <blockquote style="margin-top:5em; border: 2px solid silver; padding: 1em">
+        Numerical integration of Newton's equations of motion using
+        an empirical all-atom potential.
+    </blockquote>
+</section>
+
+
+<section>
+    <img src="./media/simulations/simulations.png" style="margin-top: 4em">
+</section>
+
+
+<section>
+    <h3>Three challenges</h3>
+    <img src="./media/cross-section/cross-section.png" style="width:80%">
+</section>
+
+
+<!--section>
+    <div class="leftcol">
+        <img src="media/bohr.jpg">
+    </div>
+    <div class="rightcol">
+        <h2 style="margin-top:3em">&bdquo;Prediction is very difficult, especially if it’s about the future.&ldquo;</h2>
+    </div>
+</section-->
+
+
+<section>
+    <div style="width:70%; margin: 5em auto; text-align: left">
+        <h3 style="color:silver">1. Atomistic simulations</h3>
+        <h3 style="color:silver">2. Ribosome essentials</h3>
+        <h3>3. Case study: PDF</h3>
+    </div>
+
+    <p>
+        McGrath, Černeková, Kolář:
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36335428/" target="_blank">PMID: 36335428</a>
+    </p>
+</section>
+
+
+<section>
+    <div class="r-stack">
+        <img src="./media/tunnel/tunnel-1.png" style="width:70%">
+        <img src="./media/tunnel/tunnel-2.png" style="width:70%" class="fragment">
+        <img src="./media/tunnel/tunnel-3.png" style="width:70%" class="fragment">
+        <img src="./media/tunnel/tunnel-4.png" style="width:70%" class="fragment">
+        <img src="./media/tunnel/tunnel-5.png" style="width:70%" class="fragment">
+    </div>
+</section>
+
+
+
+<section style="text-align: left">
+    <div style="margin-top: 3em">
+        <h3>Strategy</h3>
+        <ol>
+            <li>Build systems with and without PDF.</li>
+            <li>Using MD simulations generate conformational ensembles.</li>
+            <li>Search for differences in ribosome dynamics caused by PDF.</li>
+        </ol>
+
+    </div>
+</section>
+
+
+<section style="text-align: left">
+    <div style="margin-top: 3em">
+        <h3>Technical details</h3>
+        <ul>
+            <li>Amber family of force fields</li>
+            <li>explicit SPC/E water, 150 mM KCl, 25 mM MgCl<sub>2</sub></li>
+            <li>2M particles</li>
+            <li>vsites for hydrogens, 4 fs time step</li>
+            <li>1000 ns/traj, 4 independent trajs/system</li>
+            <li>Gromacs 2020, CPU-only implementation</li>
+            <li>3.3M corehours</li>
+        </ul>
+    </div>
+</section>
+
+
+<section data-background-video="./media/pdf.mp4"
+         data-background-video-loop="true"
+         data-background-color="black"
+         data-background-size="contain">
+    &nbsp;
+</section>
+
+
+<section>
+    <h3>Structural analysis</h3>
+    <img src="./media/rwRMSD/structures.png" style="width:70%">
+</section>
+
+<section>
+    <img src="./media/rwRMSD/plot.png" style="width:70%">
+</section>
+
+
+<section>
+    <img src="./media/rwRMSD/ecoli.png" style="width:50%">
+</section>
+
+<section>
+    <h3>Allostery via <span style="color: limegreen">Principal Component Regression</span></h3>
+    <img src="./media/mf-scheme.png" style="width: 50%">
+
+    <p>
+    Aim: Get a statistical model to predict F.
+    </p>
+</section>
+
+
+<section style="text-align: left">
+    <ol style="margin-top:4em">
+        <li>Select atoms to test allostery.</li>
+        <li>Cartesian coordinates &xrarr; principle components (PCs).</li>
+        <li>Dimensionality reduction (~100 PCs).</li>
+        <li>Linear combination of selected PCs to correlate with F.</li>
+    </ol>
+    <div style="margin: 4em; text-align: center">
+        Hub, de Groot (2009):
+        <a href="https://pubmed.ncbi.nlm.nih.gov/19714202/" target="_blank">PMID: 19714202</a>
+    </div>
+</section>
+
+
+<section>
+    <img src="./media/mf-ul22tip.png" style="width: 80%">
+</section>
+
+
+<section>
+    <div class="r-stack" style="margin-top: 3em">
+        <img src="./media/histograms/histograms-0.png" style="width:100%">
+        <img src="./media/histograms/histograms-1.png" style="width:100%" class="fragment">
+    </div>
+</section>
+
+
+
+<section>
+    <h3>Prediction accuracy</h3>
+    <img src="./media/accuracy/accuracy.png" style="width: 100%">
+</section>
+
+
+
+<section data-background-image="./media/mcm.png"
+         data-background-size="contain">
+</section>
+
+
+
+<section style="text-align: left">
+    <h3>Further reading</h3>
+
+
+    
+    <p>
+        Bock, Gabrielli, Kolář, Grubmüller (2023):
+        <a href="https://pubmed.ncbi.nlm.nih.gov/36719969" target="_blank">PMID: 36719969</a>
+    </p>
+
+    <p> 
+        Kolář, Nagy, Kunkel, Vaiana, Bock, Grubmüller (2022): 
+        <a href="https://pubmed.ncbi.nlm.nih.gov/35150281" target="_blank">PMID: 35150281</a><br>
+    </p>
+
+    <p>
+        Bock, Kolář, Grubmüller (2018):
+        <a href="https://pubmed.ncbi.nlm.nih.gov/29202442" target="_blank">PMID: 29202442</a>
+    </p>
+
+    <h4 style="margin-top: 7em"><a href="http://mhko.science/contact" target="_blank">http://mhko.science/contact</a></h4>
+    <h4><a href="http://mhko.science/jh-inst-2023" target="_blank">http://mhko.science/jh-inst-2023</a></h4>
+</section>
+
+
+<section>
+</section>
+
+
+
+
+<section>
+    <img src="./media/classifiers.png" style="width: 80%">
+</section>
+
+<section>
+    <img src="./media/vemp-anchor-struct.png">
+</section>
+
+
+<!--
+============ SLIDES END HERE ============
+-->
+            </div>
+        </div>
+
+		<script src="dist/reveal.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                autoPlayMedia: true,
+                controls: false,
+                progress: true, 
+                slideNumber: true,
+                transition: 'none', 
+                backgroundTransition: 'none',
+                center: false,
+			});
+		</script>
+	</body>
+</html>
+        
